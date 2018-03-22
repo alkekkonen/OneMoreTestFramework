@@ -17,12 +17,14 @@ dependencies {
 test {
 
     doFirst {
-        println("Паэхали!")
+        println 'Paehali!'
     }
 
-    doLast{
-        println("Приехали.")
+    doLast {
+        println 'Priyehali('
     }
+
+//    -Dlog4j.configuration= /src/test/resources/log4j.properties
 
     testLogging.showStandardStreams = true
 
