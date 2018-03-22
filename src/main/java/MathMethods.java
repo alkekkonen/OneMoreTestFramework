@@ -8,8 +8,4 @@ public class MathMethods {
         return a * b;
     }
 
-    public int twoNumbersDivide(int firstNum, int secondNum){
-        return firstNum / secondNum;
-    }
-
 }

@@ -1,9 +1,12 @@
+import groovy.util.logging.Log4j;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestMathMethods {
 
-    MathMethods mm = new MathMethods();
+@Log4j
+public class MathMethodsTest {
+
+    private MathMethods mm = new MathMethods();
 
     @Test
     public void testTwoNumbersSumPositive(){
