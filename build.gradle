@@ -21,7 +21,8 @@ test {
     }
 
     doLast {
-        println 'Priyehali('
+        println """
+                Priyehali :("""
     }
 
     testLogging.showStandardStreams = true

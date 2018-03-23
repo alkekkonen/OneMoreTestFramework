@@ -17,17 +17,17 @@ public class MathMethodsTest {
 
     @Test(expected = AssertionError.class)
     public void testTwoNumbersSumNegative(){
-        log.warn("Start processing testTwoNumbersSumNegative with WARN");
+        log.info("Start processing testTwoNumbersSumNegative with INFO");
         Assert.assertEquals(17,  mm.twoNumbersSum(10, 6));
     }
 
     @Test
     public void testTwoNumbersMultiplyPositive(){
-        log.info("Start processing testTwoNumbersMultiplyPositive with INFO");
+        log.warn("Start processing testTwoNumbersMultiplyPositive with WARN");
         Assert.assertEquals(42,  mm.twoNumbersMultiply(7, 6));
     }
 
-    @Test (expected = AssertionError.class)
+    @Test(expected = AssertionError.class)
     public void testTwoNumbersMultiplyNegative(){
         log.error("Start processing testTwoNumbersMultiplyNegative with ERROR");
         Assert.assertEquals(26,  mm.twoNumbersMultiply(7, 6));
