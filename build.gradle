@@ -24,8 +24,6 @@ test {
         println 'Priyehali('
     }
 
-//    -Dlog4j.configuration= /src/test/resources/log4j.properties
-
     testLogging.showStandardStreams = true
 
 }
