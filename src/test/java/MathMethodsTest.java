@@ -1,10 +1,8 @@
-import groovy.util.logging.Log4j;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
 
-@Log4j
 public class MathMethodsTest {
 
     private static final Logger log = Logger.getLogger(MathMethodsTest.class);
