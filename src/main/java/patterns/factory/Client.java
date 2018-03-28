@@ -1,6 +1,6 @@
 package patterns.factory;
 
-public interface Client {
+interface Client {
 
     String getOS();
 
