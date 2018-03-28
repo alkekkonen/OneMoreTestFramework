@@ -1,4 +1,7 @@
-package patterns.builder;
+package patterns;
+
+import patterns.builder.Person;
+import patterns.builder.PersonBuilder;
 
 public class Sandbox {
 
