@@ -5,6 +5,7 @@ import patterns.builder.PersonBuilder;
 
 public class Sandbox {
 
+
     public static void main(String[] args) {
 
         Person person = new PersonBuilder()
@@ -14,6 +15,9 @@ public class Sandbox {
             .setStreetAddresse("Lenina 25")
             .setNationality("Russian")
             .build();
+
+
+        System.out.println(person.toString());
 
     }
 

@@ -9,8 +9,8 @@ public class Person {
     private String nationality;
 
     public Person(
-        final String lastName,
         final String firstName,
+        final String lastName,
         final String streetAddress,
         final String city,
         final String nationality)
@@ -21,5 +21,10 @@ public class Person {
         this.city = city;
         this.nationality = nationality;
 
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "[name = " + firstName + " " + lastName + "]";
     }
 }
