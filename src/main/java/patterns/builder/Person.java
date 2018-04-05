@@ -15,8 +15,8 @@ public class Person {
         final String city,
         final String nationality)
     {
-        this.lastName = lastName;
         this.firstName = firstName;
+        this.lastName = lastName;
         this.streetAddress = streetAddress;
         this.city = city;
         this.nationality = nationality;
