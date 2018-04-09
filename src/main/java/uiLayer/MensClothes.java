@@ -14,7 +14,7 @@ public class MensClothes extends HtmlElement {
     }
 
     @Name("MensShirts")
-    @FindBy(css = "a[href='/men-shirts/']")
+    @FindBy(xpath = "//*[@id=\"landing-content-grid-asset-item-0\"]/div/div[1]/div[2]/div[1]/a")
     private Button mensShirtsButton;
 
 //    public void isMensShirtsButtonExists() {
