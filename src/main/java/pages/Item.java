@@ -1,12 +1,10 @@
-package uiLayer;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
-
-import java.util.List;
 
 public class Item extends HtmlElement {
 
@@ -15,21 +13,21 @@ public class Item extends HtmlElement {
     }
 
 
-//  @Name("Submit")
-    @FindBy(css = "submit__unlinked")
-    private Button submit;
+    //  @Name("Submit")
+//    @FindBy(css = "submit__unlinked")
+    @FindBy(xpath = "//*[text()='В корзину']")
+    public Button submit;
 
-//  @Name("Find")
+    //  @Name("Find")
     @FindBy(css = ".find-in-store-block")
-    private Button findInStore;
+    public Button findInStore;
 
 
-
-    public Button getSubmit() {
-        return submit;
-    }
-
-    public Button getFindInStore() {
-        return findInStore;
-    }
+//    public Button getSubmit() {
+//        return submit;
+//    }
+//
+//    public Button getFindInStore() {
+//        return findInStore;
+//    }
 }

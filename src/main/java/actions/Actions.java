@@ -1,4 +1,4 @@
-package businessLayer;
+package actions;
 
 import ru.yandex.qatools.htmlelements.element.Button;
 
@@ -8,7 +8,6 @@ public class Actions {
 
     public static void click(Button button){
         button.click();
-
     }
 
     public static void isAppeared(Button button){

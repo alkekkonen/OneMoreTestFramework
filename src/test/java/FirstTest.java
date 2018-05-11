@@ -1,22 +1,24 @@
-import businessLayer.Actions;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import uiLayer.Item;
-import uiLayer.MainPage;
-import uiLayer.MensClothes;
-import uiLayer.MensShirts;
+import pages.Item;
+import pages.MainPage;
+import pages.MensClothes;
+import pages.MensShirts;
+import utils.ScreenshotOnFailure;
+import utils.SingletonChromeDriver;
+
 
 public class FirstTest {
 
-    private static WebDriver driver = new ChromeDriver();
+    private static final WebDriver driver = SingletonChromeDriver.getInstance();
+
     private MainPage mainPage = new MainPage(driver);
     private MensClothes mensClothesPage = new MensClothes(driver);
     private MensShirts mensShirtsPage = new MensShirts(driver);
     private Item itemPage = new Item(driver);
-//    Actions actions = new Actions();
+
+    @Rule
+    public ScreenshotOnFailure screenshotTestRule = new ScreenshotOnFailure(driver);
 
     @Before
     public void loadPage() {
@@ -25,22 +27,17 @@ public class FirstTest {
 
     @Test
     public void goToMensClothes() throws Exception {
-        Actions.click(mainPage.getMensClothesButton());
-        Actions.click(mensClothesPage.getMensShirtsButton());
-        Actions.click(mensShirtsPage.getFirstShirt());
-        Actions.isAppeared(itemPage.getSubmit());
-        Actions.isAppeared(itemPage.getFindInStore());
 
-
-
-//        mensClothesPage.isMensShirtsButtonExists();
-
+        mainPage.mensClothesButton.click();
+        mensClothesPage.mensShirtsButton.click();
+        mensShirtsPage.firstShirt.click();
+        itemPage.submit.isDisplayed();
+        itemPage.findInStore.isDisplayed();
 
     }
 
-
-    @After
-    public void closeDriver() {
+    @AfterClass
+    public static void closeDriver() {
         driver.quit();
     }
 
