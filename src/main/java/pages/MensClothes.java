@@ -28,4 +28,9 @@ public class MensClothes extends HtmlElement {
 //        return mensShirtsButton;
 //    }
 
+    @Name("MensAccessoires")
+    @FindBy(xpath = "")
+    public Button mensAccessoiresButton;
+
+
 }
