@@ -12,12 +12,9 @@ import utils.SingletonChromeDriver;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.logging.Logger;
 
 @RunWith(value = Parameterized.class)
 public class FirstTest {
-
-    private static final Logger logger = Logger.getLogger(FirstTest.class.getName());
 
     private static final WebDriver driver = SingletonChromeDriver.getInstance();
 
@@ -52,7 +49,6 @@ public class FirstTest {
 
     @Test
     public void objectArrayDisplayed() throws Exception {
-        logger.info("Starting objectArrayDisplayed test");
         mainPage.mensClothesButton.click();
         element.isDisplayed();
 

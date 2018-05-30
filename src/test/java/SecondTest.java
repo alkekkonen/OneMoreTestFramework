@@ -14,8 +14,6 @@ import java.util.logging.Logger;
 
 public class SecondTest {
 
-    private static final Logger logger = Logger.getLogger(SecondTest.class.getName());
-
     private static final WebDriver driver = SingletonChromeDriver.getInstance();
 
     private MainPage mainPage = new MainPage(driver);
@@ -34,13 +32,11 @@ public class SecondTest {
 
     @Test
     public void goToMensClothes() throws Exception {
-        logger.info("Starting goToMensClothes test");
         mainPage.mensClothesButton.click();
         mensClothesPage.mensShirtsButton.click();
         mensShirtsPage.firstShirt.click();
         itemPage.submit.isDisplayed();
         itemPage.findInStore.isDisplayed();
-//        logger.warning("Element " + + "is not found");
 
     }
 
